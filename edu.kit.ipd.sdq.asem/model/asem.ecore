@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ASEM" nsURI="edu.kit.ipd.sdq.asem" nsPrefix="ASEM">
+  <eSubpackages name="base" nsURI="edu.kit.ipd.sdq.asem.base" nsPrefix="base">
+    <eClassifiers xsi:type="ecore:EClass" name="Named" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false"
+          eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Identifiable" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" unique="false" lowerBound="1"
+          eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
+          iD="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TypedElement" eSuperTypes="#//base/Named #//base/Identifiable">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//classifiers/Classifier"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="classifiers" nsURI="edu.kit.ipd.sdq.asem.classifiers" nsPrefix="classifiers">
+    <eClassifiers xsi:type="ecore:EClass" name="Classifier" abstract="true" eSuperTypes="#//base/Named">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="methods" upperBound="-1"
+          eType="#//dataexchange/Method" containment="true" resolveProxies="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ComposedType" eSuperTypes="#//classifiers/Classifier">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="primitiveType" eType="#//primitivetypes/PrimitiveType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Component" abstract="true" eSuperTypes="#//classifiers/Classifier #//base/Named #//base/Identifiable">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="typedElements" upperBound="-1"
+          eType="#//base/TypedElement" containment="true" resolveProxies="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//classifiers/Component"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Module" eSuperTypes="#//classifiers/Component"/>
+  </eSubpackages>
+  <eSubpackages name="dataexchange" nsURI="edu.kit.ipd.sdq.asem.dataexchange" nsPrefix="dataexchange">
+    <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//base/TypedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="readable" unique="false"
+          eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="writable" unique="false"
+          eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Message" eSuperTypes="#//dataexchange/Variable"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Method" eSuperTypes="#//base/Named #//base/Identifiable">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+          eType="#//dataexchange/Parameter" containment="true" resolveProxies="false"
+          eOpposite="#//dataexchange/Parameter/method"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="returnType" eType="#//dataexchange/ReturnType"
+          containment="true" resolveProxies="false" eOpposite="#//dataexchange/ReturnType/method"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
+          eType="#//dataexchange/Variable" containment="true" resolveProxies="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="#//dataexchange/Variable">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" unique="false"
+          eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="method" eType="#//dataexchange/Method"
+          eOpposite="#//dataexchange/Method/parameters"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ReturnType" eSuperTypes="#//base/TypedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="method" eType="#//dataexchange/Method"
+          eOpposite="#//dataexchange/Method/returnType"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="primitivetypes" nsURI="edu.kit.ipd.sdq.asem.primitivetypes"
+      nsPrefix="primitivetypes">
+    <eClassifiers xsi:type="ecore:EClass" name="PrimitiveType" eSuperTypes="#//classifiers/Classifier"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ContinuousType" eSuperTypes="#//primitivetypes/PrimitiveType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="UnsignedDiscreteType" eSuperTypes="#//primitivetypes/PrimitiveType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SignedDiscreteType" eSuperTypes="#//primitivetypes/PrimitiveType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="BooleanType" eSuperTypes="#//primitivetypes/PrimitiveType"/>
+  </eSubpackages>
+</ecore:EPackage>

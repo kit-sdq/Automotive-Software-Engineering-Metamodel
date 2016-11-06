@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated asem_flattened -->
+      <package
+            uri="edu.kit.ipd.sdq.asemf"
+            class="edu.kit.ipd.sdq.asemf.AsemfPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated asem_flattened_renamed -->
+      <package
+            uri="edu.kit.ipd.sdq.asemfr"
+            class="edu.kit.ipd.sdq.asemfr.AsemfrPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated asem -->
+      <package
+            uri="edu.kit.ipd.sdq.asem.base"
+            class="edu.kit.ipd.sdq.ASEM.base.BasePackage"
+            genModel="model/asem.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated asem -->
+      <package
+            uri="edu.kit.ipd.sdq.asem.classifiers"
+            class="edu.kit.ipd.sdq.ASEM.classifiers.ClassifiersPackage"
+            genModel="model/asem.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated asem -->
+      <package
+            uri="edu.kit.ipd.sdq.asem.dataexchange"
+            class="edu.kit.ipd.sdq.ASEM.dataexchange.DataexchangePackage"
+            genModel="model/asem.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated asem -->
+      <package
+            uri="edu.kit.ipd.sdq.asem.primitivetypes"
+            class="edu.kit.ipd.sdq.ASEM.primitivetypes.PrimitivetypesPackage"
+            genModel="model/asem.genmodel"/>
+   </extension>
+</plugin>

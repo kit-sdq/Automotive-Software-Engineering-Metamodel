@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.asem/src-gen" modelPluginID="edu.kit.ipd.sdq.asem"
+    modelName="Asem" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore" operationReflection="true"
+    importOrganizing="true">
+  <foreignModel>asem.ecore</foreignModel>
+  <genPackages prefix="ASEM" basePackage="edu.kit.ipd.sdq" disposableProviderFactory="true"
+      ecorePackage="asem.ecore#/">
+    <nestedGenPackages prefix="Base" basePackage="edu.kit.ipd.sdq.ASEM" disposableProviderFactory="true"
+        ecorePackage="asem.ecore#//base">
+      <genClasses image="false" ecoreClass="asem.ecore#//base/Named">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute asem.ecore#//base/Named/name"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="asem.ecore#//base/Identifiable">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute asem.ecore#//base/Identifiable/id"/>
+      </genClasses>
+      <genClasses ecoreClass="asem.ecore#//base/TypedElement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference asem.ecore#//base/TypedElement/type"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Classifiers" basePackage="edu.kit.ipd.sdq.ASEM" disposableProviderFactory="true"
+        ecorePackage="asem.ecore#//classifiers">
+      <genClasses image="false" ecoreClass="asem.ecore#//classifiers/Classifier">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asem.ecore#//classifiers/Classifier/methods"/>
+      </genClasses>
+      <genClasses ecoreClass="asem.ecore#//classifiers/ComposedType">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference asem.ecore#//classifiers/ComposedType/primitiveType"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="asem.ecore#//classifiers/Component">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asem.ecore#//classifiers/Component/typedElements"/>
+      </genClasses>
+      <genClasses ecoreClass="asem.ecore#//classifiers/Class"/>
+      <genClasses ecoreClass="asem.ecore#//classifiers/Module"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Dataexchange" basePackage="edu.kit.ipd.sdq.ASEM" disposableProviderFactory="true"
+        ecorePackage="asem.ecore#//dataexchange">
+      <genClasses ecoreClass="asem.ecore#//dataexchange/Variable">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute asem.ecore#//dataexchange/Variable/readable"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute asem.ecore#//dataexchange/Variable/writable"/>
+      </genClasses>
+      <genClasses ecoreClass="asem.ecore#//dataexchange/Message"/>
+      <genClasses ecoreClass="asem.ecore#//dataexchange/Method">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asem.ecore#//dataexchange/Method/parameters"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asem.ecore#//dataexchange/Method/returnType"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference asem.ecore#//dataexchange/Method/variables"/>
+      </genClasses>
+      <genClasses ecoreClass="asem.ecore#//dataexchange/Parameter">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute asem.ecore#//dataexchange/Parameter/position"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference asem.ecore#//dataexchange/Parameter/method"/>
+      </genClasses>
+      <genClasses ecoreClass="asem.ecore#//dataexchange/ReturnType">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference asem.ecore#//dataexchange/ReturnType/method"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Primitivetypes" basePackage="edu.kit.ipd.sdq.ASEM"
+        disposableProviderFactory="true" ecorePackage="asem.ecore#//primitivetypes">
+      <genClasses ecoreClass="asem.ecore#//primitivetypes/PrimitiveType"/>
+      <genClasses ecoreClass="asem.ecore#//primitivetypes/ContinuousType"/>
+      <genClasses ecoreClass="asem.ecore#//primitivetypes/UnsignedDiscreteType"/>
+      <genClasses ecoreClass="asem.ecore#//primitivetypes/SignedDiscreteType"/>
+      <genClasses ecoreClass="asem.ecore#//primitivetypes/BooleanType"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>
