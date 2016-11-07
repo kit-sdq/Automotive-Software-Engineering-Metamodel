@@ -2,6 +2,7 @@
  */
 package edu.kit.ipd.sdq.ASEM.primitivetypes.impl;
 
+import edu.kit.ipd.sdq.ASEM.ASEMPackage;
 import edu.kit.ipd.sdq.ASEM.base.BasePackage;
 
 import edu.kit.ipd.sdq.ASEM.base.impl.BasePackageImpl;
@@ -14,6 +15,7 @@ import edu.kit.ipd.sdq.ASEM.dataexchange.DataexchangePackage;
 
 import edu.kit.ipd.sdq.ASEM.dataexchange.impl.DataexchangePackageImpl;
 
+import edu.kit.ipd.sdq.ASEM.impl.ASEMPackageImpl;
 import edu.kit.ipd.sdq.ASEM.primitivetypes.BooleanType;
 import edu.kit.ipd.sdq.ASEM.primitivetypes.ContinuousType;
 import edu.kit.ipd.sdq.ASEM.primitivetypes.PrimitiveType;
@@ -120,18 +122,21 @@ public class PrimitivetypesPackageImpl extends EPackageImpl implements Primitive
 		EcorePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
+		ASEMPackageImpl theASEMPackage = (ASEMPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ASEMPackage.eNS_URI) instanceof ASEMPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ASEMPackage.eNS_URI) : ASEMPackage.eINSTANCE);
 		BasePackageImpl theBasePackage = (BasePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BasePackage.eNS_URI) instanceof BasePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BasePackage.eNS_URI) : BasePackage.eINSTANCE);
 		ClassifiersPackageImpl theClassifiersPackage = (ClassifiersPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ClassifiersPackage.eNS_URI) instanceof ClassifiersPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ClassifiersPackage.eNS_URI) : ClassifiersPackage.eINSTANCE);
 		DataexchangePackageImpl theDataexchangePackage = (DataexchangePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DataexchangePackage.eNS_URI) instanceof DataexchangePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DataexchangePackage.eNS_URI) : DataexchangePackage.eINSTANCE);
 
 		// Create package meta-data objects
 		thePrimitivetypesPackage.createPackageContents();
+		theASEMPackage.createPackageContents();
 		theBasePackage.createPackageContents();
 		theClassifiersPackage.createPackageContents();
 		theDataexchangePackage.createPackageContents();
 
 		// Initialize created meta-data
 		thePrimitivetypesPackage.initializePackageContents();
+		theASEMPackage.initializePackageContents();
 		theBasePackage.initializePackageContents();
 		theClassifiersPackage.initializePackageContents();
 		theDataexchangePackage.initializePackageContents();
@@ -276,9 +281,6 @@ public class PrimitivetypesPackageImpl extends EPackageImpl implements Primitive
 		initEClass(signedDiscreteTypeEClass, SignedDiscreteType.class, "SignedDiscreteType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(booleanTypeEClass, BooleanType.class, "BooleanType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		// Create resource
-		createResource(eNS_URI);
 	}
 
 } //PrimitivetypesPackageImpl

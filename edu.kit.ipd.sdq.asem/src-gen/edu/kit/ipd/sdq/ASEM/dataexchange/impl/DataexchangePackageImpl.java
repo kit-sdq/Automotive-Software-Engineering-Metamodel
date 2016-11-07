@@ -2,6 +2,7 @@
  */
 package edu.kit.ipd.sdq.ASEM.dataexchange.impl;
 
+import edu.kit.ipd.sdq.ASEM.ASEMPackage;
 import edu.kit.ipd.sdq.ASEM.base.BasePackage;
 
 import edu.kit.ipd.sdq.ASEM.base.impl.BasePackageImpl;
@@ -18,6 +19,7 @@ import edu.kit.ipd.sdq.ASEM.dataexchange.Parameter;
 import edu.kit.ipd.sdq.ASEM.dataexchange.ReturnType;
 import edu.kit.ipd.sdq.ASEM.dataexchange.Variable;
 
+import edu.kit.ipd.sdq.ASEM.impl.ASEMPackageImpl;
 import edu.kit.ipd.sdq.ASEM.primitivetypes.PrimitivetypesPackage;
 
 import edu.kit.ipd.sdq.ASEM.primitivetypes.impl.PrimitivetypesPackageImpl;
@@ -122,18 +124,21 @@ public class DataexchangePackageImpl extends EPackageImpl implements Dataexchang
 		EcorePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
+		ASEMPackageImpl theASEMPackage = (ASEMPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ASEMPackage.eNS_URI) instanceof ASEMPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ASEMPackage.eNS_URI) : ASEMPackage.eINSTANCE);
 		BasePackageImpl theBasePackage = (BasePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BasePackage.eNS_URI) instanceof BasePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BasePackage.eNS_URI) : BasePackage.eINSTANCE);
 		ClassifiersPackageImpl theClassifiersPackage = (ClassifiersPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ClassifiersPackage.eNS_URI) instanceof ClassifiersPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ClassifiersPackage.eNS_URI) : ClassifiersPackage.eINSTANCE);
 		PrimitivetypesPackageImpl thePrimitivetypesPackage = (PrimitivetypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(PrimitivetypesPackage.eNS_URI) instanceof PrimitivetypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(PrimitivetypesPackage.eNS_URI) : PrimitivetypesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theDataexchangePackage.createPackageContents();
+		theASEMPackage.createPackageContents();
 		theBasePackage.createPackageContents();
 		theClassifiersPackage.createPackageContents();
 		thePrimitivetypesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theDataexchangePackage.initializePackageContents();
+		theASEMPackage.initializePackageContents();
 		theBasePackage.initializePackageContents();
 		theClassifiersPackage.initializePackageContents();
 		thePrimitivetypesPackage.initializePackageContents();
@@ -368,9 +373,6 @@ public class DataexchangePackageImpl extends EPackageImpl implements Dataexchang
 
 		initEClass(returnTypeEClass, ReturnType.class, "ReturnType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getReturnType_Method(), this.getMethod(), this.getMethod_ReturnType(), "method", null, 0, 1, ReturnType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		// Create resource
-		createResource(eNS_URI);
 	}
 
 } //DataexchangePackageImpl

@@ -8,6 +8,14 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated asem -->
       <package
+            uri="edu.kit.ipd.sdq.asem"
+            class="edu.kit.ipd.sdq.ASEM.ASEMPackage"
+            genModel="model/asem.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated asem -->
+      <package
             uri="edu.kit.ipd.sdq.asem.base"
             class="edu.kit.ipd.sdq.ASEM.base.BasePackage"
             genModel="model/asem.genmodel"/>
