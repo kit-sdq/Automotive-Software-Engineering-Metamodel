@@ -141,22 +141,22 @@ public interface BasePackage extends EPackage {
 	int TYPED_ELEMENT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPED_ELEMENT__NAME = NAMED__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TYPED_ELEMENT__ID = NAMED_FEATURE_COUNT + 0;
+	int TYPED_ELEMENT__ID = IDENTIFIABLE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_ELEMENT__NAME = IDENTIFIABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -165,7 +165,7 @@ public interface BasePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TYPED_ELEMENT__TYPE = NAMED_FEATURE_COUNT + 1;
+	int TYPED_ELEMENT__TYPE = IDENTIFIABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Typed Element</em>' class.
@@ -174,7 +174,7 @@ public interface BasePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TYPED_ELEMENT_FEATURE_COUNT = NAMED_FEATURE_COUNT + 2;
+	int TYPED_ELEMENT_FEATURE_COUNT = IDENTIFIABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Typed Element</em>' class.
@@ -183,7 +183,7 @@ public interface BasePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TYPED_ELEMENT_OPERATION_COUNT = NAMED_OPERATION_COUNT + 0;
+	int TYPED_ELEMENT_OPERATION_COUNT = IDENTIFIABLE_OPERATION_COUNT + 0;
 
 
 	/**

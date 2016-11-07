@@ -92,12 +92,12 @@ public class DataexchangeAdapterFactory extends AdapterFactoryImpl {
 				return createReturnTypeAdapter();
 			}
 			@Override
-			public Adapter caseNamed(Named object) {
-				return createNamedAdapter();
-			}
-			@Override
 			public Adapter caseIdentifiable(Identifiable object) {
 				return createIdentifiableAdapter();
+			}
+			@Override
+			public Adapter caseNamed(Named object) {
+				return createNamedAdapter();
 			}
 			@Override
 			public Adapter caseTypedElement(TypedElement object) {

@@ -3,10 +3,8 @@
 package edu.kit.ipd.sdq.ASEM.dataexchange.impl;
 
 import edu.kit.ipd.sdq.ASEM.base.BasePackage;
-import edu.kit.ipd.sdq.ASEM.base.Identifiable;
-
-import edu.kit.ipd.sdq.ASEM.base.impl.NamedImpl;
-
+import edu.kit.ipd.sdq.ASEM.base.Named;
+import edu.kit.ipd.sdq.ASEM.base.impl.IdentifiableImpl;
 import edu.kit.ipd.sdq.ASEM.dataexchange.DataexchangePackage;
 import edu.kit.ipd.sdq.ASEM.dataexchange.Method;
 import edu.kit.ipd.sdq.ASEM.dataexchange.Parameter;
@@ -37,7 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.ASEM.dataexchange.impl.MethodImpl#getId <em>Id</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.ASEM.dataexchange.impl.MethodImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.ASEM.dataexchange.impl.MethodImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.ASEM.dataexchange.impl.MethodImpl#getReturnType <em>Return Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.ASEM.dataexchange.impl.MethodImpl#getVariables <em>Variables</em>}</li>
@@ -45,26 +43,26 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class MethodImpl extends NamedImpl implements Method {
+public class MethodImpl extends IdentifiableImpl implements Method {
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ID_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String id = ID_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
@@ -120,8 +118,8 @@ public class MethodImpl extends NamedImpl implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return id;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -129,11 +127,11 @@ public class MethodImpl extends NamedImpl implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DataexchangePackage.METHOD__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, DataexchangePackage.METHOD__NAME, oldName, name));
 	}
 
 	/**
@@ -248,8 +246,8 @@ public class MethodImpl extends NamedImpl implements Method {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case DataexchangePackage.METHOD__ID:
-				return getId();
+			case DataexchangePackage.METHOD__NAME:
+				return getName();
 			case DataexchangePackage.METHOD__PARAMETERS:
 				return getParameters();
 			case DataexchangePackage.METHOD__RETURN_TYPE:
@@ -269,8 +267,8 @@ public class MethodImpl extends NamedImpl implements Method {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case DataexchangePackage.METHOD__ID:
-				setId((String)newValue);
+			case DataexchangePackage.METHOD__NAME:
+				setName((String)newValue);
 				return;
 			case DataexchangePackage.METHOD__PARAMETERS:
 				getParameters().clear();
@@ -295,8 +293,8 @@ public class MethodImpl extends NamedImpl implements Method {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case DataexchangePackage.METHOD__ID:
-				setId(ID_EDEFAULT);
+			case DataexchangePackage.METHOD__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 			case DataexchangePackage.METHOD__PARAMETERS:
 				getParameters().clear();
@@ -319,8 +317,8 @@ public class MethodImpl extends NamedImpl implements Method {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case DataexchangePackage.METHOD__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case DataexchangePackage.METHOD__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case DataexchangePackage.METHOD__PARAMETERS:
 				return parameters != null && !parameters.isEmpty();
 			case DataexchangePackage.METHOD__RETURN_TYPE:
@@ -338,9 +336,9 @@ public class MethodImpl extends NamedImpl implements Method {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Identifiable.class) {
+		if (baseClass == Named.class) {
 			switch (derivedFeatureID) {
-				case DataexchangePackage.METHOD__ID: return BasePackage.IDENTIFIABLE__ID;
+				case DataexchangePackage.METHOD__NAME: return BasePackage.NAMED__NAME;
 				default: return -1;
 			}
 		}
@@ -354,9 +352,9 @@ public class MethodImpl extends NamedImpl implements Method {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Identifiable.class) {
+		if (baseClass == Named.class) {
 			switch (baseFeatureID) {
-				case BasePackage.IDENTIFIABLE__ID: return DataexchangePackage.METHOD__ID;
+				case BasePackage.NAMED__NAME: return DataexchangePackage.METHOD__NAME;
 				default: return -1;
 			}
 		}
@@ -373,8 +371,8 @@ public class MethodImpl extends NamedImpl implements Method {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (id: ");
-		result.append(id);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

@@ -81,8 +81,8 @@ public class BaseSwitch<T> extends Switch<T> {
 			case BasePackage.TYPED_ELEMENT: {
 				TypedElement typedElement = (TypedElement)theEObject;
 				T result = caseTypedElement(typedElement);
-				if (result == null) result = caseNamed(typedElement);
 				if (result == null) result = caseIdentifiable(typedElement);
+				if (result == null) result = caseNamed(typedElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -69,15 +69,6 @@ public interface DataexchangePackage extends EPackage {
 	int VARIABLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE__NAME = BasePackage.TYPED_ELEMENT__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,6 +76,15 @@ public interface DataexchangePackage extends EPackage {
 	 * @ordered
 	 */
 	int VARIABLE__ID = BasePackage.TYPED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__NAME = BasePackage.TYPED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -142,15 +142,6 @@ public interface DataexchangePackage extends EPackage {
 	int MESSAGE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MESSAGE__NAME = VARIABLE__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -158,6 +149,15 @@ public interface DataexchangePackage extends EPackage {
 	 * @ordered
 	 */
 	int MESSAGE__ID = VARIABLE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__NAME = VARIABLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -215,22 +215,22 @@ public interface DataexchangePackage extends EPackage {
 	int METHOD = 2;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHOD__NAME = BasePackage.NAMED__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int METHOD__ID = BasePackage.NAMED_FEATURE_COUNT + 0;
+	int METHOD__ID = BasePackage.IDENTIFIABLE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHOD__NAME = BasePackage.IDENTIFIABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -239,7 +239,7 @@ public interface DataexchangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int METHOD__PARAMETERS = BasePackage.NAMED_FEATURE_COUNT + 1;
+	int METHOD__PARAMETERS = BasePackage.IDENTIFIABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Return Type</b></em>' containment reference.
@@ -248,7 +248,7 @@ public interface DataexchangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int METHOD__RETURN_TYPE = BasePackage.NAMED_FEATURE_COUNT + 2;
+	int METHOD__RETURN_TYPE = BasePackage.IDENTIFIABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Variables</b></em>' containment reference list.
@@ -257,7 +257,7 @@ public interface DataexchangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int METHOD__VARIABLES = BasePackage.NAMED_FEATURE_COUNT + 3;
+	int METHOD__VARIABLES = BasePackage.IDENTIFIABLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Method</em>' class.
@@ -266,7 +266,7 @@ public interface DataexchangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int METHOD_FEATURE_COUNT = BasePackage.NAMED_FEATURE_COUNT + 4;
+	int METHOD_FEATURE_COUNT = BasePackage.IDENTIFIABLE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Method</em>' class.
@@ -275,7 +275,7 @@ public interface DataexchangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int METHOD_OPERATION_COUNT = BasePackage.NAMED_OPERATION_COUNT + 0;
+	int METHOD_OPERATION_COUNT = BasePackage.IDENTIFIABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.ASEM.dataexchange.impl.ParameterImpl <em>Parameter</em>}' class.
@@ -288,15 +288,6 @@ public interface DataexchangePackage extends EPackage {
 	int PARAMETER = 3;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER__NAME = VARIABLE__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -304,6 +295,15 @@ public interface DataexchangePackage extends EPackage {
 	 * @ordered
 	 */
 	int PARAMETER__ID = VARIABLE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__NAME = VARIABLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -379,15 +379,6 @@ public interface DataexchangePackage extends EPackage {
 	int RETURN_TYPE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RETURN_TYPE__NAME = BasePackage.TYPED_ELEMENT__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -395,6 +386,15 @@ public interface DataexchangePackage extends EPackage {
 	 * @ordered
 	 */
 	int RETURN_TYPE__ID = BasePackage.TYPED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_TYPE__NAME = BasePackage.TYPED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.

@@ -91,8 +91,8 @@ public class ClassifiersSwitch<T> extends Switch<T> {
 			case ClassifiersPackage.COMPONENT: {
 				Component component = (Component)theEObject;
 				T result = caseComponent(component);
-				if (result == null) result = caseClassifier(component);
 				if (result == null) result = caseIdentifiable(component);
+				if (result == null) result = caseClassifier(component);
 				if (result == null) result = caseNamed(component);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -101,8 +101,8 @@ public class ClassifiersSwitch<T> extends Switch<T> {
 				edu.kit.ipd.sdq.ASEM.classifiers.Class class_ = (edu.kit.ipd.sdq.ASEM.classifiers.Class)theEObject;
 				T result = caseClass(class_);
 				if (result == null) result = caseComponent(class_);
-				if (result == null) result = caseClassifier(class_);
 				if (result == null) result = caseIdentifiable(class_);
+				if (result == null) result = caseClassifier(class_);
 				if (result == null) result = caseNamed(class_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -111,8 +111,8 @@ public class ClassifiersSwitch<T> extends Switch<T> {
 				Module module = (Module)theEObject;
 				T result = caseModule(module);
 				if (result == null) result = caseComponent(module);
-				if (result == null) result = caseClassifier(module);
 				if (result == null) result = caseIdentifiable(module);
+				if (result == null) result = caseClassifier(module);
 				if (result == null) result = caseNamed(module);
 				if (result == null) result = defaultCase(theEObject);
 				return result;

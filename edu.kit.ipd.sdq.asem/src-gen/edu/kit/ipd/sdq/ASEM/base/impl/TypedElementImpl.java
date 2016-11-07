@@ -3,7 +3,7 @@
 package edu.kit.ipd.sdq.ASEM.base.impl;
 
 import edu.kit.ipd.sdq.ASEM.base.BasePackage;
-import edu.kit.ipd.sdq.ASEM.base.Identifiable;
+import edu.kit.ipd.sdq.ASEM.base.Named;
 import edu.kit.ipd.sdq.ASEM.base.TypedElement;
 
 import edu.kit.ipd.sdq.ASEM.classifiers.Classifier;
@@ -23,32 +23,32 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.ASEM.base.impl.TypedElementImpl#getId <em>Id</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.ASEM.base.impl.TypedElementImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.ASEM.base.impl.TypedElementImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TypedElementImpl extends NamedImpl implements TypedElement {
+public class TypedElementImpl extends IdentifiableImpl implements TypedElement {
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ID_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String id = ID_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
@@ -84,8 +84,8 @@ public class TypedElementImpl extends NamedImpl implements TypedElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return id;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -93,11 +93,11 @@ public class TypedElementImpl extends NamedImpl implements TypedElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BasePackage.TYPED_ELEMENT__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, BasePackage.TYPED_ELEMENT__NAME, oldName, name));
 	}
 
 	/**
@@ -146,8 +146,8 @@ public class TypedElementImpl extends NamedImpl implements TypedElement {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BasePackage.TYPED_ELEMENT__ID:
-				return getId();
+			case BasePackage.TYPED_ELEMENT__NAME:
+				return getName();
 			case BasePackage.TYPED_ELEMENT__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
@@ -163,8 +163,8 @@ public class TypedElementImpl extends NamedImpl implements TypedElement {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BasePackage.TYPED_ELEMENT__ID:
-				setId((String)newValue);
+			case BasePackage.TYPED_ELEMENT__NAME:
+				setName((String)newValue);
 				return;
 			case BasePackage.TYPED_ELEMENT__TYPE:
 				setType((Classifier)newValue);
@@ -181,8 +181,8 @@ public class TypedElementImpl extends NamedImpl implements TypedElement {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BasePackage.TYPED_ELEMENT__ID:
-				setId(ID_EDEFAULT);
+			case BasePackage.TYPED_ELEMENT__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 			case BasePackage.TYPED_ELEMENT__TYPE:
 				setType((Classifier)null);
@@ -199,8 +199,8 @@ public class TypedElementImpl extends NamedImpl implements TypedElement {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BasePackage.TYPED_ELEMENT__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case BasePackage.TYPED_ELEMENT__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case BasePackage.TYPED_ELEMENT__TYPE:
 				return type != null;
 		}
@@ -214,9 +214,9 @@ public class TypedElementImpl extends NamedImpl implements TypedElement {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Identifiable.class) {
+		if (baseClass == Named.class) {
 			switch (derivedFeatureID) {
-				case BasePackage.TYPED_ELEMENT__ID: return BasePackage.IDENTIFIABLE__ID;
+				case BasePackage.TYPED_ELEMENT__NAME: return BasePackage.NAMED__NAME;
 				default: return -1;
 			}
 		}
@@ -230,9 +230,9 @@ public class TypedElementImpl extends NamedImpl implements TypedElement {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Identifiable.class) {
+		if (baseClass == Named.class) {
 			switch (baseFeatureID) {
-				case BasePackage.IDENTIFIABLE__ID: return BasePackage.TYPED_ELEMENT__ID;
+				case BasePackage.NAMED__NAME: return BasePackage.TYPED_ELEMENT__NAME;
 				default: return -1;
 			}
 		}
@@ -249,8 +249,8 @@ public class TypedElementImpl extends NamedImpl implements TypedElement {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (id: ");
-		result.append(id);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

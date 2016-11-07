@@ -299,9 +299,9 @@ public class ClassifiersPackageImpl extends EPackageImpl implements ClassifiersP
 		// Add supertypes to classes
 		classifierEClass.getESuperTypes().add(theBasePackage.getNamed());
 		composedTypeEClass.getESuperTypes().add(this.getClassifier());
+		componentEClass.getESuperTypes().add(theBasePackage.getIdentifiable());
 		componentEClass.getESuperTypes().add(this.getClassifier());
 		componentEClass.getESuperTypes().add(theBasePackage.getNamed());
-		componentEClass.getESuperTypes().add(theBasePackage.getIdentifiable());
 		classEClass.getESuperTypes().add(this.getComponent());
 		moduleEClass.getESuperTypes().add(this.getComponent());
 

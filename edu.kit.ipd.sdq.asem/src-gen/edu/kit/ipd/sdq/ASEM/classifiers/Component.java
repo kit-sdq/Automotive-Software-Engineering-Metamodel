@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface Component extends Classifier, Named, Identifiable {
+public interface Component extends Identifiable, Classifier, Named {
 	/**
 	 * Returns the value of the '<em><b>Typed Elements</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.ASEM.base.TypedElement}.

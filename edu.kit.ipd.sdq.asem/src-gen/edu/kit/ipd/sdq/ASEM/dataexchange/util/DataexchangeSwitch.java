@@ -74,8 +74,8 @@ public class DataexchangeSwitch<T> extends Switch<T> {
 				Variable variable = (Variable)theEObject;
 				T result = caseVariable(variable);
 				if (result == null) result = caseTypedElement(variable);
-				if (result == null) result = caseNamed(variable);
 				if (result == null) result = caseIdentifiable(variable);
+				if (result == null) result = caseNamed(variable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -84,16 +84,16 @@ public class DataexchangeSwitch<T> extends Switch<T> {
 				T result = caseMessage(message);
 				if (result == null) result = caseVariable(message);
 				if (result == null) result = caseTypedElement(message);
-				if (result == null) result = caseNamed(message);
 				if (result == null) result = caseIdentifiable(message);
+				if (result == null) result = caseNamed(message);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case DataexchangePackage.METHOD: {
 				Method method = (Method)theEObject;
 				T result = caseMethod(method);
-				if (result == null) result = caseNamed(method);
 				if (result == null) result = caseIdentifiable(method);
+				if (result == null) result = caseNamed(method);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -102,8 +102,8 @@ public class DataexchangeSwitch<T> extends Switch<T> {
 				T result = caseParameter(parameter);
 				if (result == null) result = caseVariable(parameter);
 				if (result == null) result = caseTypedElement(parameter);
-				if (result == null) result = caseNamed(parameter);
 				if (result == null) result = caseIdentifiable(parameter);
+				if (result == null) result = caseNamed(parameter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -111,8 +111,8 @@ public class DataexchangeSwitch<T> extends Switch<T> {
 				ReturnType returnType = (ReturnType)theEObject;
 				T result = caseReturnType(returnType);
 				if (result == null) result = caseTypedElement(returnType);
-				if (result == null) result = caseNamed(returnType);
 				if (result == null) result = caseIdentifiable(returnType);
+				if (result == null) result = caseNamed(returnType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

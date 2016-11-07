@@ -350,8 +350,8 @@ public class DataexchangePackageImpl extends EPackageImpl implements Dataexchang
 		// Add supertypes to classes
 		variableEClass.getESuperTypes().add(theBasePackage.getTypedElement());
 		messageEClass.getESuperTypes().add(this.getVariable());
-		methodEClass.getESuperTypes().add(theBasePackage.getNamed());
 		methodEClass.getESuperTypes().add(theBasePackage.getIdentifiable());
+		methodEClass.getESuperTypes().add(theBasePackage.getNamed());
 		parameterEClass.getESuperTypes().add(this.getVariable());
 		returnTypeEClass.getESuperTypes().add(theBasePackage.getTypedElement());
 

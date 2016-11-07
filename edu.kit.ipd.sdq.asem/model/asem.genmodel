@@ -8,6 +8,7 @@
   <foreignModel>asem.ecore</foreignModel>
   <genPackages prefix="ASEM" basePackage="edu.kit.ipd.sdq" disposableProviderFactory="true"
       ecorePackage="asem.ecore#/">
+    <genClasses ecoreClass="asem.ecore#//Dummy"/>
     <nestedGenPackages prefix="Base" basePackage="edu.kit.ipd.sdq.ASEM" disposableProviderFactory="true"
         ecorePackage="asem.ecore#//base">
       <genClasses image="false" ecoreClass="asem.ecore#//base/Named">

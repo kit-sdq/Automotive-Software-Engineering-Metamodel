@@ -20,7 +20,7 @@ import edu.kit.ipd.sdq.ASEM.classifiers.Classifier;
  * @model
  * @generated
  */
-public interface TypedElement extends Named, Identifiable {
+public interface TypedElement extends Identifiable, Named {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

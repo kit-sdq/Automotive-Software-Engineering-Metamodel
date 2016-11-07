@@ -169,13 +169,22 @@ public interface ClassifiersPackage extends EPackage {
 	int COMPONENT = 2;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__ID = BasePackage.IDENTIFIABLE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__NAME = CLASSIFIER__NAME;
+	int COMPONENT__NAME = BasePackage.IDENTIFIABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Methods</b></em>' containment reference list.
@@ -184,16 +193,7 @@ public interface ClassifiersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__METHODS = CLASSIFIER__METHODS;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPONENT__ID = CLASSIFIER_FEATURE_COUNT + 0;
+	int COMPONENT__METHODS = BasePackage.IDENTIFIABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Typed Elements</b></em>' containment reference list.
@@ -202,7 +202,7 @@ public interface ClassifiersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__TYPED_ELEMENTS = CLASSIFIER_FEATURE_COUNT + 1;
+	int COMPONENT__TYPED_ELEMENTS = BasePackage.IDENTIFIABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Component</em>' class.
@@ -211,7 +211,7 @@ public interface ClassifiersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = CLASSIFIER_FEATURE_COUNT + 2;
+	int COMPONENT_FEATURE_COUNT = BasePackage.IDENTIFIABLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Component</em>' class.
@@ -220,7 +220,7 @@ public interface ClassifiersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_OPERATION_COUNT = CLASSIFIER_OPERATION_COUNT + 0;
+	int COMPONENT_OPERATION_COUNT = BasePackage.IDENTIFIABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.ASEM.classifiers.impl.ClassImpl <em>Class</em>}' class.
@@ -231,6 +231,15 @@ public interface ClassifiersPackage extends EPackage {
 	 * @generated
 	 */
 	int CLASS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS__ID = COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -249,15 +258,6 @@ public interface ClassifiersPackage extends EPackage {
 	 * @ordered
 	 */
 	int CLASS__METHODS = COMPONENT__METHODS;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS__ID = COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Typed Elements</b></em>' containment reference list.
@@ -297,6 +297,15 @@ public interface ClassifiersPackage extends EPackage {
 	int MODULE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__ID = COMPONENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -313,15 +322,6 @@ public interface ClassifiersPackage extends EPackage {
 	 * @ordered
 	 */
 	int MODULE__METHODS = COMPONENT__METHODS;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODULE__ID = COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Typed Elements</b></em>' containment reference list.

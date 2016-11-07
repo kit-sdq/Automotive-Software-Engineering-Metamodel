@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Identifiable extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
@@ -32,7 +33,7 @@ public interface Identifiable extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see edu.kit.ipd.sdq.ASEM.base.BasePackage#getIdentifiable_Id()
-	 * @model unique="false" id="true" required="true"
+	 * @model default="" unique="false" id="true" required="true"
 	 * @generated
 	 */
 	String getId();

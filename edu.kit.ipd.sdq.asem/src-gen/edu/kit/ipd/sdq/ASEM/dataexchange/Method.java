@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Method extends Named, Identifiable {
+public interface Method extends Identifiable, Named {
 	/**
 	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.ASEM.dataexchange.Parameter}.
