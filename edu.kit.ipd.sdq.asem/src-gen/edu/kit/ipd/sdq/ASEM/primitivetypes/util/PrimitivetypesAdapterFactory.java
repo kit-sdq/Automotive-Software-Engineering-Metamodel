@@ -92,6 +92,10 @@ public class PrimitivetypesAdapterFactory extends AdapterFactoryImpl {
 				return createBooleanTypeAdapter();
 			}
 			@Override
+			public Adapter casePrimitiveTypeRepository(PrimitiveTypeRepository object) {
+				return createPrimitiveTypeRepositoryAdapter();
+			}
+			@Override
 			public Adapter caseNamed(Named object) {
 				return createNamedAdapter();
 			}
@@ -186,6 +190,20 @@ public class PrimitivetypesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBooleanTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.ASEM.primitivetypes.PrimitiveTypeRepository <em>Primitive Type Repository</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.ASEM.primitivetypes.PrimitiveTypeRepository
+	 * @generated
+	 */
+	public Adapter createPrimitiveTypeRepositoryAdapter() {
 		return null;
 	}
 

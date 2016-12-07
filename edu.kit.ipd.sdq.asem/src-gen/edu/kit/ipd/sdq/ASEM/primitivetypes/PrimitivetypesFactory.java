@@ -67,6 +67,15 @@ public interface PrimitivetypesFactory extends EFactory {
 	BooleanType createBooleanType();
 
 	/**
+	 * Returns a new object of class '<em>Primitive Type Repository</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Primitive Type Repository</em>'.
+	 * @generated
+	 */
+	PrimitiveTypeRepository createPrimitiveTypeRepository();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

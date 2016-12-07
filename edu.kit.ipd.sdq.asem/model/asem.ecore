@@ -66,5 +66,9 @@
     <eClassifiers xsi:type="ecore:EClass" name="UnsignedDiscreteType" eSuperTypes="#//primitivetypes/PrimitiveType"/>
     <eClassifiers xsi:type="ecore:EClass" name="SignedDiscreteType" eSuperTypes="#//primitivetypes/PrimitiveType"/>
     <eClassifiers xsi:type="ecore:EClass" name="BooleanType" eSuperTypes="#//primitivetypes/PrimitiveType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PrimitiveTypeRepository" eSuperTypes="#//base/Named">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="primitiveTypes" upperBound="-1"
+          eType="#//primitivetypes/PrimitiveType" containment="true"/>
+    </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

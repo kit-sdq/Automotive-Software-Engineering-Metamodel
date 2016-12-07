@@ -61,6 +61,7 @@ public class PrimitivetypesFactoryImpl extends EFactoryImpl implements Primitive
 			case PrimitivetypesPackage.UNSIGNED_DISCRETE_TYPE: return createUnsignedDiscreteType();
 			case PrimitivetypesPackage.SIGNED_DISCRETE_TYPE: return createSignedDiscreteType();
 			case PrimitivetypesPackage.BOOLEAN_TYPE: return createBooleanType();
+			case PrimitivetypesPackage.PRIMITIVE_TYPE_REPOSITORY: return createPrimitiveTypeRepository();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -114,6 +115,16 @@ public class PrimitivetypesFactoryImpl extends EFactoryImpl implements Primitive
 	public BooleanType createBooleanType() {
 		BooleanTypeImpl booleanType = new BooleanTypeImpl();
 		return booleanType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PrimitiveTypeRepository createPrimitiveTypeRepository() {
+		PrimitiveTypeRepositoryImpl primitiveTypeRepository = new PrimitiveTypeRepositoryImpl();
+		return primitiveTypeRepository;
 	}
 
 	/**

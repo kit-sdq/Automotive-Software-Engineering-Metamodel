@@ -2,10 +2,12 @@
  */
 package edu.kit.ipd.sdq.ASEM.primitivetypes;
 
+import edu.kit.ipd.sdq.ASEM.base.BasePackage;
 import edu.kit.ipd.sdq.ASEM.classifiers.ClassifiersPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -288,6 +290,53 @@ public interface PrimitivetypesPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.ASEM.primitivetypes.impl.PrimitiveTypeRepositoryImpl <em>Primitive Type Repository</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.ASEM.primitivetypes.impl.PrimitiveTypeRepositoryImpl
+	 * @see edu.kit.ipd.sdq.ASEM.primitivetypes.impl.PrimitivetypesPackageImpl#getPrimitiveTypeRepository()
+	 * @generated
+	 */
+	int PRIMITIVE_TYPE_REPOSITORY = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE_TYPE_REPOSITORY__NAME = BasePackage.NAMED__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Primitive Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE_TYPE_REPOSITORY__PRIMITIVE_TYPES = BasePackage.NAMED_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Primitive Type Repository</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE_TYPE_REPOSITORY_FEATURE_COUNT = BasePackage.NAMED_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Primitive Type Repository</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE_TYPE_REPOSITORY_OPERATION_COUNT = BasePackage.NAMED_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.ASEM.primitivetypes.PrimitiveType <em>Primitive Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -336,6 +385,27 @@ public interface PrimitivetypesPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getBooleanType();
+
+	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.ASEM.primitivetypes.PrimitiveTypeRepository <em>Primitive Type Repository</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Primitive Type Repository</em>'.
+	 * @see edu.kit.ipd.sdq.ASEM.primitivetypes.PrimitiveTypeRepository
+	 * @generated
+	 */
+	EClass getPrimitiveTypeRepository();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.ASEM.primitivetypes.PrimitiveTypeRepository#getPrimitiveTypes <em>Primitive Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Primitive Types</em>'.
+	 * @see edu.kit.ipd.sdq.ASEM.primitivetypes.PrimitiveTypeRepository#getPrimitiveTypes()
+	 * @see #getPrimitiveTypeRepository()
+	 * @generated
+	 */
+	EReference getPrimitiveTypeRepository_PrimitiveTypes();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -409,6 +479,24 @@ public interface PrimitivetypesPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BOOLEAN_TYPE = eINSTANCE.getBooleanType();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.ASEM.primitivetypes.impl.PrimitiveTypeRepositoryImpl <em>Primitive Type Repository</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.ASEM.primitivetypes.impl.PrimitiveTypeRepositoryImpl
+		 * @see edu.kit.ipd.sdq.ASEM.primitivetypes.impl.PrimitivetypesPackageImpl#getPrimitiveTypeRepository()
+		 * @generated
+		 */
+		EClass PRIMITIVE_TYPE_REPOSITORY = eINSTANCE.getPrimitiveTypeRepository();
+
+		/**
+		 * The meta object literal for the '<em><b>Primitive Types</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRIMITIVE_TYPE_REPOSITORY__PRIMITIVE_TYPES = eINSTANCE.getPrimitiveTypeRepository_PrimitiveTypes();
 
 	}
 

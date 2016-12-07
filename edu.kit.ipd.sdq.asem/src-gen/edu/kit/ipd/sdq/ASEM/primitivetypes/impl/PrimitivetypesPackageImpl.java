@@ -19,6 +19,7 @@ import edu.kit.ipd.sdq.ASEM.impl.ASEMPackageImpl;
 import edu.kit.ipd.sdq.ASEM.primitivetypes.BooleanType;
 import edu.kit.ipd.sdq.ASEM.primitivetypes.ContinuousType;
 import edu.kit.ipd.sdq.ASEM.primitivetypes.PrimitiveType;
+import edu.kit.ipd.sdq.ASEM.primitivetypes.PrimitiveTypeRepository;
 import edu.kit.ipd.sdq.ASEM.primitivetypes.PrimitivetypesFactory;
 import edu.kit.ipd.sdq.ASEM.primitivetypes.PrimitivetypesPackage;
 import edu.kit.ipd.sdq.ASEM.primitivetypes.SignedDiscreteType;
@@ -26,6 +27,7 @@ import edu.kit.ipd.sdq.ASEM.primitivetypes.UnsignedDiscreteType;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
@@ -71,6 +73,13 @@ public class PrimitivetypesPackageImpl extends EPackageImpl implements Primitive
 	 * @generated
 	 */
 	private EClass booleanTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass primitiveTypeRepositoryEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -200,6 +209,24 @@ public class PrimitivetypesPackageImpl extends EPackageImpl implements Primitive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getPrimitiveTypeRepository() {
+		return primitiveTypeRepositoryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPrimitiveTypeRepository_PrimitiveTypes() {
+		return (EReference)primitiveTypeRepositoryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public PrimitivetypesFactory getPrimitivetypesFactory() {
 		return (PrimitivetypesFactory)getEFactoryInstance();
 	}
@@ -232,6 +259,9 @@ public class PrimitivetypesPackageImpl extends EPackageImpl implements Primitive
 		signedDiscreteTypeEClass = createEClass(SIGNED_DISCRETE_TYPE);
 
 		booleanTypeEClass = createEClass(BOOLEAN_TYPE);
+
+		primitiveTypeRepositoryEClass = createEClass(PRIMITIVE_TYPE_REPOSITORY);
+		createEReference(primitiveTypeRepositoryEClass, PRIMITIVE_TYPE_REPOSITORY__PRIMITIVE_TYPES);
 	}
 
 	/**
@@ -259,6 +289,7 @@ public class PrimitivetypesPackageImpl extends EPackageImpl implements Primitive
 
 		// Obtain other dependent packages
 		ClassifiersPackage theClassifiersPackage = (ClassifiersPackage)EPackage.Registry.INSTANCE.getEPackage(ClassifiersPackage.eNS_URI);
+		BasePackage theBasePackage = (BasePackage)EPackage.Registry.INSTANCE.getEPackage(BasePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -270,6 +301,7 @@ public class PrimitivetypesPackageImpl extends EPackageImpl implements Primitive
 		unsignedDiscreteTypeEClass.getESuperTypes().add(this.getPrimitiveType());
 		signedDiscreteTypeEClass.getESuperTypes().add(this.getPrimitiveType());
 		booleanTypeEClass.getESuperTypes().add(this.getPrimitiveType());
+		primitiveTypeRepositoryEClass.getESuperTypes().add(theBasePackage.getNamed());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(primitiveTypeEClass, PrimitiveType.class, "PrimitiveType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -281,6 +313,9 @@ public class PrimitivetypesPackageImpl extends EPackageImpl implements Primitive
 		initEClass(signedDiscreteTypeEClass, SignedDiscreteType.class, "SignedDiscreteType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(booleanTypeEClass, BooleanType.class, "BooleanType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(primitiveTypeRepositoryEClass, PrimitiveTypeRepository.class, "PrimitiveTypeRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPrimitiveTypeRepository_PrimitiveTypes(), this.getPrimitiveType(), null, "primitiveTypes", null, 0, -1, PrimitiveTypeRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //PrimitivetypesPackageImpl
