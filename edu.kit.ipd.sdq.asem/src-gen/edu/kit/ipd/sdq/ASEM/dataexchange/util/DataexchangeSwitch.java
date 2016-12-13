@@ -116,6 +116,15 @@ public class DataexchangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case DataexchangePackage.CONSTANT: {
+				Constant constant = (Constant)theEObject;
+				T result = caseConstant(constant);
+				if (result == null) result = caseTypedElement(constant);
+				if (result == null) result = caseIdentifiable(constant);
+				if (result == null) result = caseNamed(constant);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -192,6 +201,21 @@ public class DataexchangeSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseReturnType(ReturnType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Constant</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Constant</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConstant(Constant object) {
 		return null;
 	}
 

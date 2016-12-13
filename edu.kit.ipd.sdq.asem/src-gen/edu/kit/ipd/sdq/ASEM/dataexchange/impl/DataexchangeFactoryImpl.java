@@ -61,6 +61,7 @@ public class DataexchangeFactoryImpl extends EFactoryImpl implements Dataexchang
 			case DataexchangePackage.METHOD: return createMethod();
 			case DataexchangePackage.PARAMETER: return createParameter();
 			case DataexchangePackage.RETURN_TYPE: return createReturnType();
+			case DataexchangePackage.CONSTANT: return createConstant();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -114,6 +115,16 @@ public class DataexchangeFactoryImpl extends EFactoryImpl implements Dataexchang
 	public ReturnType createReturnType() {
 		ReturnTypeImpl returnType = new ReturnTypeImpl();
 		return returnType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Constant createConstant() {
+		ConstantImpl constant = new ConstantImpl();
+		return constant;
 	}
 
 	/**

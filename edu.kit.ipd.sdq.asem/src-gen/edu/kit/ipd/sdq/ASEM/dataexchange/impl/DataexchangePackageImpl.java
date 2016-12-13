@@ -11,6 +11,7 @@ import edu.kit.ipd.sdq.ASEM.classifiers.ClassifiersPackage;
 
 import edu.kit.ipd.sdq.ASEM.classifiers.impl.ClassifiersPackageImpl;
 
+import edu.kit.ipd.sdq.ASEM.dataexchange.Constant;
 import edu.kit.ipd.sdq.ASEM.dataexchange.DataexchangeFactory;
 import edu.kit.ipd.sdq.ASEM.dataexchange.DataexchangePackage;
 import edu.kit.ipd.sdq.ASEM.dataexchange.Message;
@@ -73,6 +74,13 @@ public class DataexchangePackageImpl extends EPackageImpl implements Dataexchang
 	 * @generated
 	 */
 	private EClass returnTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass constantEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -274,6 +282,24 @@ public class DataexchangePackageImpl extends EPackageImpl implements Dataexchang
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getConstant() {
+		return constantEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getConstant_Value() {
+		return (EAttribute)constantEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public DataexchangeFactory getDataexchangeFactory() {
 		return (DataexchangeFactory)getEFactoryInstance();
 	}
@@ -314,6 +340,9 @@ public class DataexchangePackageImpl extends EPackageImpl implements Dataexchang
 
 		returnTypeEClass = createEClass(RETURN_TYPE);
 		createEReference(returnTypeEClass, RETURN_TYPE__METHOD);
+
+		constantEClass = createEClass(CONSTANT);
+		createEAttribute(constantEClass, CONSTANT__VALUE);
 	}
 
 	/**
@@ -354,6 +383,7 @@ public class DataexchangePackageImpl extends EPackageImpl implements Dataexchang
 		methodEClass.getESuperTypes().add(theBasePackage.getNamed());
 		parameterEClass.getESuperTypes().add(this.getVariable());
 		returnTypeEClass.getESuperTypes().add(theBasePackage.getTypedElement());
+		constantEClass.getESuperTypes().add(theBasePackage.getTypedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -373,6 +403,9 @@ public class DataexchangePackageImpl extends EPackageImpl implements Dataexchang
 
 		initEClass(returnTypeEClass, ReturnType.class, "ReturnType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getReturnType_Method(), this.getMethod(), this.getMethod_ReturnType(), "method", null, 0, 1, ReturnType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(constantEClass, Constant.class, "Constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getConstant_Value(), ecorePackage.getEString(), "value", null, 0, 1, Constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //DataexchangePackageImpl

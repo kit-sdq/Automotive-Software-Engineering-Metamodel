@@ -58,6 +58,9 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="method" eType="#//dataexchange/Method"
           eOpposite="#//dataexchange/Method/returnType"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Constant" eSuperTypes="#//base/TypedElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="primitivetypes" nsURI="edu.kit.ipd.sdq.asem.primitivetypes"
       nsPrefix="primitivetypes">

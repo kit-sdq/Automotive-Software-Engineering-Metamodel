@@ -67,6 +67,15 @@ public interface DataexchangeFactory extends EFactory {
 	ReturnType createReturnType();
 
 	/**
+	 * Returns a new object of class '<em>Constant</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Constant</em>'.
+	 * @generated
+	 */
+	Constant createConstant();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

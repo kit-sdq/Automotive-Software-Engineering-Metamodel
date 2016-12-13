@@ -434,6 +434,71 @@ public interface DataexchangePackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.ASEM.dataexchange.impl.ConstantImpl <em>Constant</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.ASEM.dataexchange.impl.ConstantImpl
+	 * @see edu.kit.ipd.sdq.ASEM.dataexchange.impl.DataexchangePackageImpl#getConstant()
+	 * @generated
+	 */
+	int CONSTANT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTANT__ID = BasePackage.TYPED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTANT__NAME = BasePackage.TYPED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTANT__TYPE = BasePackage.TYPED_ELEMENT__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTANT__VALUE = BasePackage.TYPED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Constant</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTANT_FEATURE_COUNT = BasePackage.TYPED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Constant</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTANT_OPERATION_COUNT = BasePackage.TYPED_ELEMENT_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.ASEM.dataexchange.Variable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -572,6 +637,27 @@ public interface DataexchangePackage extends EPackage {
 	EReference getReturnType_Method();
 
 	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.ASEM.dataexchange.Constant <em>Constant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Constant</em>'.
+	 * @see edu.kit.ipd.sdq.ASEM.dataexchange.Constant
+	 * @generated
+	 */
+	EClass getConstant();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.ASEM.dataexchange.Constant#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see edu.kit.ipd.sdq.ASEM.dataexchange.Constant#getValue()
+	 * @see #getConstant()
+	 * @generated
+	 */
+	EAttribute getConstant_Value();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -707,6 +793,24 @@ public interface DataexchangePackage extends EPackage {
 		 * @generated
 		 */
 		EReference RETURN_TYPE__METHOD = eINSTANCE.getReturnType_Method();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.ASEM.dataexchange.impl.ConstantImpl <em>Constant</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.ASEM.dataexchange.impl.ConstantImpl
+		 * @see edu.kit.ipd.sdq.ASEM.dataexchange.impl.DataexchangePackageImpl#getConstant()
+		 * @generated
+		 */
+		EClass CONSTANT = eINSTANCE.getConstant();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONSTANT__VALUE = eINSTANCE.getConstant_Value();
 
 	}
 

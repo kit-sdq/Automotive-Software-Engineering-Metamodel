@@ -92,6 +92,10 @@ public class DataexchangeAdapterFactory extends AdapterFactoryImpl {
 				return createReturnTypeAdapter();
 			}
 			@Override
+			public Adapter caseConstant(Constant object) {
+				return createConstantAdapter();
+			}
+			@Override
 			public Adapter caseIdentifiable(Identifiable object) {
 				return createIdentifiableAdapter();
 			}
@@ -190,6 +194,20 @@ public class DataexchangeAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createReturnTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.ASEM.dataexchange.Constant <em>Constant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.ASEM.dataexchange.Constant
+	 * @generated
+	 */
+	public Adapter createConstantAdapter() {
 		return null;
 	}
 
