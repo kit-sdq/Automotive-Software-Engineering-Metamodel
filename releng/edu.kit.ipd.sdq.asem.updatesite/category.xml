@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/edu.kit.ipd.sdq.asem.feature_0.1.0.qualifier.jar" id="edu.kit.ipd.sdq.asem.feature" version="0.1.0.qualifier">
+   <feature url="features/edu.kit.ipd.sdq.asem.feature_0.1.0.jar" id="edu.kit.ipd.sdq.asem.feature" version="0.1.0">
       <category name="ASEM"/>
    </feature>
    <category-def name="ASEM" label="ASEM">
