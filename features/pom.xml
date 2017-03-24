@@ -14,7 +14,7 @@
 	<name>Feature Modules</name>
 
 	<modules>
-		<module>edu.kit.ipd.sdq.asem.feature</module>
+		<module>edu.kit.ipd.sdq.metamodels.asem.feature</module>
 	</modules>
 
 </project>

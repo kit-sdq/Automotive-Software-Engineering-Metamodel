@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<aggregator:Aggregation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:aggregator="http://www.eclipse.org/cbi/p2repo/2011/aggregator/1.1.0" label="ASEM Update Site" buildRoot="target">
+<aggregator:Aggregation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:aggregator="http://www.eclipse.org/cbi/p2repo/2011/aggregator/1.1.0" label="SDQ ASEM Aggregated Update Site" buildRoot="target">
   <validationSets label="main">
     <contributions label="local">
-      <repositories location="../edu.kit.ipd.sdq.asem.updatesite/target/repository"/>
+      <repositories location="../edu.kit.ipd.sdq.metamodels.asem.updatesite/target/repository"/>
     </contributions>
     <contributions label="externals">
       <repositories location="http://download.eclipse.org/releases/neon/" mirrorArtifacts="false">

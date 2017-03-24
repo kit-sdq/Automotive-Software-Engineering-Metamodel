@@ -10,8 +10,8 @@
 		<groupId>edu.kit.ipd.sdq</groupId>
 	</parent>
 	
-	<artifactId>edu.kit.ipd.sdq.asem.updatesite</artifactId>
-	<name>ASEM Update Site</name>
+	<artifactId>edu.kit.ipd.sdq.metamodels.asem.updatesite</artifactId>
+	<name>SDQ ASEM Update Site</name>
 	<packaging>eclipse-repository</packaging>
 	
 </project>

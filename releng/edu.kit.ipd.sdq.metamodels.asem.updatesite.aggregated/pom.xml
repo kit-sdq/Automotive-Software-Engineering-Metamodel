@@ -9,9 +9,9 @@
 		<relativePath>../</relativePath>
 	</parent>
 
-	<artifactId>edu.kit.ipd.sdq.asem.updatesite.aggregated</artifactId>
+	<artifactId>edu.kit.ipd.sdq.metamodels.asem.updatesite.aggregated</artifactId>
 	<packaging>pom</packaging>
-	<name>ASEM Aggregated Update Site</name>
+	<name>SDQ ASEM Aggregated Update Site</name>
 
 	<build>
 		<plugins>

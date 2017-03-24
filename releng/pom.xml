@@ -14,8 +14,8 @@
 	<name>Releng Modules</name>
 
 	<modules>
-		<module>edu.kit.ipd.sdq.asem.updatesite</module>
-		<module>edu.kit.ipd.sdq.asem.updatesite.aggregated</module>
+		<module>edu.kit.ipd.sdq.metamodels.asem.updatesite</module>
+		<module>edu.kit.ipd.sdq.metamodels.asem.updatesite.aggregated</module>
 	</modules>
 
 </project>
