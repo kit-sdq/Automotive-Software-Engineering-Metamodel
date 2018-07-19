@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/edu.kit.ipd.sdq.metamodels.asem.feature_0.2.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.asem.feature" version="0.2.0.qualifier">
+   <feature url="features/edu.kit.ipd.sdq.metamodels.asem.feature_0.2.0.jar" id="edu.kit.ipd.sdq.metamodels.asem.feature" version="0.2.0">
       <category name="Metamodels"/>
    </feature>
    <category-def name="Metamodels" label="Metamodels">
