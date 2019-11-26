@@ -14,7 +14,7 @@
 	<name>Bundle Modules</name>
 
 	<modules>
-		<module>edu.kit.ipd.sdq.asem</module>
+		<module>edu.kit.ipd.sdq.metamodels.asem</module>
 	</modules>
 
 </project>

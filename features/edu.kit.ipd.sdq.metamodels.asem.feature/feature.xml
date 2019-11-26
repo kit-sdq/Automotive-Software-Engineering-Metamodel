@@ -22,7 +22,7 @@
    </requires>
 
    <plugin
-         id="edu.kit.ipd.sdq.asem"
+         id="edu.kit.ipd.sdq.metamodels.asem"
          download-size="0"
          install-size="0"
          version="0.0.0"
