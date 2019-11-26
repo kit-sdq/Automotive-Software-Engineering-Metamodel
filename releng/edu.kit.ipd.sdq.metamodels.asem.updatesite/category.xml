@@ -3,6 +3,9 @@
    <feature url="features/edu.kit.ipd.sdq.metamodels.asem.feature_0.4.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.asem.feature" version="0.4.0.qualifier">
       <category name="Metamodels"/>
    </feature>
+   <feature id="edu.kit.ipd.sdq.metamodels.asem.feature.source" version="0.4.0.qualifier">
+      <category name="Metamodels"/>
+   </feature>
    <category-def name="Metamodels" label="Metamodels">
       <description>
          Metamodels provided by SDQ
