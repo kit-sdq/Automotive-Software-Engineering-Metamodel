@@ -1,6 +1,8 @@
 # Maven
 target/
 workspace/
+.polyglot.build.properties
+.mvn/wrapper/maven-wrapper.jar
 
 *.class
 
