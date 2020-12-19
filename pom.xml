@@ -29,19 +29,7 @@
 	</repositories>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.0</version>
-				<configuration>
-					<compilerId>eclipse</compilerId>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-					<optimize>true</optimize>
-				</configuration>
-			</plugin>
-			
+		<plugins>	
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
@@ -74,6 +62,7 @@
 					</environments>
 				</configuration>
 			</plugin>
+
 			<!-- Creates source versions of bundles -->
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
@@ -88,6 +77,7 @@
 					</execution>
 				</executions>
 			</plugin>
+
 			<!-- Creates source versions of features -->
 			<plugin>
 				<groupId>org.eclipse.tycho.extras</groupId>
@@ -103,6 +93,7 @@
 					</execution>
 				</executions>
 			</plugin>
+
 			<!-- Correctly handles source features on p2 update site -->
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
