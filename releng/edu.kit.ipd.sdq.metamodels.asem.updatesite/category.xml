@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/edu.kit.ipd.sdq.metamodels.asem.feature_1.1.0.jar" id="edu.kit.ipd.sdq.metamodels.asem.feature" version="1.1.0">
+   <feature url="features/edu.kit.ipd.sdq.metamodels.asem.feature_1.2.0.qualifier.jar" id="edu.kit.ipd.sdq.metamodels.asem.feature" version="1.2.0.qualifier">
       <category name="Metamodels"/>
    </feature>
-   <feature id="edu.kit.ipd.sdq.metamodels.asem.feature.source" version="1.1.0">
+   <feature id="edu.kit.ipd.sdq.metamodels.asem.feature.source" version="1.2.0.qualifier">
       <category name="Metamodels"/>
    </feature>
    <category-def name="Metamodels" label="Metamodels">
